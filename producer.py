@@ -23,7 +23,7 @@ producer = KafkaProducer(
 # Send 9 messages with different user keys
 # Kafka hashes the key to decide which partition to use,
 # so the same key always goes to the same partition
-users = ['user-1', 'user-2', 'user-3']
+users = [f'user-{i}' for i in range(1, 11)]  # user-1 through user-10
 events = ['login', 'purchase', 'logout']
 
 for user in users:
