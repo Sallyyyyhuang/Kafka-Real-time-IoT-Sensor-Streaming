@@ -1,2 +1,16 @@
+# Local tooling
 /.claude
 /.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+build/
+dist/
+
+# Virtual environments
+venv/
+env/
+.env

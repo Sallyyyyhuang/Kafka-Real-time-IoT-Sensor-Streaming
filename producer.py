@@ -20,7 +20,7 @@ producer = KafkaProducer(
     key_serializer=lambda k: k.encode('utf-8'),
 )
 
-# Send 9 messages with different user keys
+# Send an event per user/event combination, each keyed by user.
 # Kafka hashes the key to decide which partition to use,
 # so the same key always goes to the same partition
 users = [f'user-{i}' for i in range(1, 11)]  # user-1 through user-10
