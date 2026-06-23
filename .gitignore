@@ -2,6 +2,9 @@
 /.claude
 /.venv
 
+# Personal practice / scratch
+/practice/
+
 # Python
 __pycache__/
 *.py[cod]
