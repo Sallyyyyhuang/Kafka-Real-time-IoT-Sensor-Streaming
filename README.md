@@ -9,6 +9,23 @@ It runs a modern **KRaft** broker (no Zookeeper) and demonstrates the core Kafka
 concepts hands-on: topics, partitions, keyed ordering, consumer groups, offsets,
 topic-to-topic stream processing, and consumer lag.
 
+## Dashboard
+
+![Live IoT Sensor Dashboard](docs/dashboard.png)
+
+The Streamlit dashboard shows per-device windowed averages (one line per sensor),
+the latest value and min/max for each device, and a live feed of anomaly alerts —
+all updating in real time as the processor emits to the derived topics.
+
+## Kafka UI
+
+![Kafka UI — Topics](docs/kafka-ui.png)
+
+The web Kafka UI (http://localhost:8080) is your X-ray into the cluster. The Topics
+view above shows the three topics with their intentional partition counts
+(`sensor-readings` = 3, the derived topics = 1) and live message counts. The
+**Consumers** view shows each group, which partitions its members own, and their lag.
+
 ## Architecture
 
 ```
